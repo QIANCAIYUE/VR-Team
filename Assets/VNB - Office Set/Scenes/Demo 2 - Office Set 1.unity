@@ -1780,9 +1780,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5925766993625676381, guid: c8aa3af8e883c6e4dbaf78236b90a9d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1269824110}
-    - targetCorrespondingSourceObject: {fileID: 5925766993625676381, guid: c8aa3af8e883c6e4dbaf78236b90a9d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1269824111}
   m_SourcePrefab: {fileID: 100100000, guid: c8aa3af8e883c6e4dbaf78236b90a9d2, type: 3}
 --- !u!4 &141316030 stripped
 Transform:
@@ -12207,7 +12204,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -12242,7 +12239,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -12411,21 +12408,6 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
---- !u!114 &1269824111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269824097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73417aaae4a200340a2c6fa27cdab450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorTriggerOpen
-  openAngle: 90
-  openSpeed: 8
-  doorAudio: {fileID: 1269824105}
 --- !u!1001 &1285795709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14677,6 +14659,7 @@ MonoBehaviour:
   openLocalRotationOffset: {x: 0, y: 90, z: 0}
   moveDuration: 0.45
   touchCooldown: 0.35
+  doorAudio: {fileID: 1269824105}
 --- !u!65 &1532433653
 BoxCollider:
   m_ObjectHideFlags: 0

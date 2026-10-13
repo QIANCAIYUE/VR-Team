@@ -9,6 +9,8 @@ public class TouchToggleTransform : MonoBehaviour
     [SerializeField] private float moveDuration = 0.45f;
     [SerializeField] private float touchCooldown = 0.35f;
 
+    [SerializeField] private AudioSource doorAudio;
+
     private Vector3 closedLocalPosition;
     private Quaternion closedLocalRotation;
     private bool isOpen;
@@ -34,6 +36,10 @@ public class TouchToggleTransform : MonoBehaviour
 
         nextTouchTime = Time.time + touchCooldown;
         isOpen = !isOpen;
+
+        // 仅在开门时播放，关门时不播放开门音效。
+        if (isOpen && doorAudio != null)
+            doorAudio.Play();
 
         Vector3 destinationPosition = closedLocalPosition;
         Quaternion destinationRotation = closedLocalRotation;
