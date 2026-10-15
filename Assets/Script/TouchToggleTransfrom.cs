@@ -37,8 +37,8 @@ public class TouchToggleTransform : MonoBehaviour
         nextTouchTime = Time.time + touchCooldown;
         isOpen = !isOpen;
 
-        // 仅在开门时播放，关门时不播放开门音效。
-        if (isOpen && doorAudio != null)
+        // 开门和关门都播放门的音效。
+        if (doorAudio != null)
             doorAudio.Play();
 
         Vector3 destinationPosition = closedLocalPosition;
